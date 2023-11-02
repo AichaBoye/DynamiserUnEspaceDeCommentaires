@@ -10,7 +10,7 @@ document.getElementById("myform").addEventListener("submit", function (e) {
             erreur = "Tous les champs doivent être remplis"
         }
     }
-
+    
     if (erreur) {
         e.preventDefault();
         document.getElementById("erreur").innerHTML = erreur;
@@ -20,8 +20,6 @@ document.getElementById("myform").addEventListener("submit", function (e) {
     const commentForm = document.getElementById("myform");
     const commentList = document.getElementById("comment-list");
 
-    commentForm.addEventListener("submit", function (event) {
-        event.preventDefault();
 
         const prenom = document.getElementById("myinput").value;
         const nom = document.getElementById("myname").value;
@@ -32,6 +30,6 @@ document.getElementById("myform").addEventListener("submit", function (e) {
         commentList.appendChild(commentItem);
 
         commentForm.reset();
-    });
+
 
 });
